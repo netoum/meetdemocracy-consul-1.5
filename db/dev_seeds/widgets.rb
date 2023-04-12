@@ -13,7 +13,7 @@ section "Creating header and cards for the homepage" do
         [attribute, -> { I18n.t("seeds.cards.header.#{attribute}") }]
       end.to_h
     ).merge(
-      link_url: "http://consulproject.org/",
+      link_url: "https://meetdemocracy.com",
       header: true,
       image_attributes: create_image_attachment("header")
     )
@@ -25,7 +25,7 @@ section "Creating header and cards for the homepage" do
         [attribute, -> { I18n.t("seeds.cards.debate.#{attribute}") }]
       end.to_h
     ).merge(
-      link_url: "https://youtu.be/zU_0UN4VajY",
+      link_url: "https://meetdemocracy.com",
       header: false,
       image_attributes: create_image_attachment("debate")
     )
@@ -37,7 +37,7 @@ section "Creating header and cards for the homepage" do
         [attribute, -> { I18n.t("seeds.cards.proposal.#{attribute}") }]
       end.to_h
     ).merge(
-      link_url: "https://youtu.be/ZHqBpT4uCoM",
+      link_url: "https://meetdemocracy.com",
       header: false,
       image_attributes: create_image_attachment("proposal")
     )
@@ -49,7 +49,7 @@ section "Creating header and cards for the homepage" do
         [attribute, -> { I18n.t("seeds.cards.budget.#{attribute}") }]
       end.to_h
     ).merge(
-      link_url: "https://youtu.be/igQ8KGZdk9c",
+      link_url: "https://meetdemocracy.com",
       header: false,
       image_attributes: create_image_attachment("budget")
     )
