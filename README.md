@@ -1,48 +1,49 @@
 <!--
-  Title: CONSUL
-  Description: Citizen Participation and Open Government Application
+  Title: Meet Democracy Fork on Consul 1.5
+  Description: A fork on the latest stable Consul Project version 1.5
   Keywords: democracy, citizen participation, eparticipation, debates, proposals, voting, consultations, crowdlaw, participatory budgeting
 -->
 
-![CONSUL logo](https://raw.githubusercontent.com/consul/consul/master/public/consul_logo.png)
 
-# CONSUL
+**NOTE** This is the opensource code repository of the Meet Democracy **fork** of Consul project version 1.5 .
+The Consul Project has been origially developed for the Madrid City government eParticipation website.
+[See the original Consul Project Github Repository](https://github.com/consul/consul)
+A special thanks go the Consul Project Team who did and still doing amzing job with continious updates and support
 
-Citizen Participation and Open Government Application
+![Meet Democracy logo](https://meetdemocracy.com/images/LogoMeetDemocracy.png)
 
-![Build status](https://github.com/consul/consul/workflows/tests/badge.svg)
-[![Code Climate](https://codeclimate.com/github/consul/consul/badges/gpa.svg)](https://codeclimate.com/github/consul/consul)
-[![Coverage Status](https://coveralls.io/repos/github/consul/consul/badge.svg)](https://coveralls.io/github/consul/consul?branch=master)
-[![Crowdin](https://d322cqt584bo4o.cloudfront.net/consul/localized.svg)](https://crowdin.com/project/consul)
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+# Meet Democracy
+[https://meetdemocracy.com](https://meetdemocracy.com)
 
-[![Accessibility conformance](https://img.shields.io/badge/accessibility-WAI:AA-green.svg)](https://www.w3.org/WAI/eval/Overview)
-[![A11y issues checked with Rocket Validator](https://rocketvalidator.com/badges/checked_with_rocket_validator.svg?url=https://rocketvalidator.com)](https://rocketvalidator.com/opensource)
+Meet democracy platform allows the participants of your community to debate and vote on legislation, budget and more. Our goal is to make community development easy. We intend to democratize community participation by making it accessible to all. We recognize the importance of having access to a democratic and trustworthy platform. Give your community citizens the freedom to express themselves.
 
-[![Join the chat at https://gitter.im/consul/consul](https://badges.gitter.im/consul/consul.svg)](https://gitter.im/consul/consul?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Help wanted](https://img.shields.io/badge/help-wanted-brightgreen.svg?style=flat-square)](https://github.com/consul/consul/issues?q=is%3Aopen+label%3A"help+wanted")
 
-[![Knapsack Pro Parallel CI builds for RSpec tests](https://img.shields.io/badge/Knapsack%20Pro-Parallel%20/%20RSpec%20tests-%230074ff)](https://knapsackpro.com/dashboard/organizations/176/projects/202/test_suites/318/builds?utm_campaign=organization-id-176&utm_content=test-suite-id-318&utm_medium=readme&utm_source=knapsack-pro-badge&utm_term=project-id-202)
+## What is new ?
 
-This is the opensource code repository of the eParticipation website CONSUL, originally developed for the Madrid City government eParticipation website
+- Add a cookie consent form and a link to privacy page
+Using Gem 'cookies_eu'
+You can customize the content, link, html and css
+Translation ready in dozens of languages
+[See Gem doc](https://github.com/infinum/cookies_eu)
 
-## Documentation
 
-Check the ongoing documentation at [https://docs.consulproject.org](https://docs.consulproject.org) to learn more about how to start your own CONSUL fork, install it, customize it and learn to use it from an administrator/maintainer perspective.
+- Debates vote count changes
+Changing the way debates votes are showed to the users. 
+Show total votes instead of vote score
 
-## CONSUL Project main website
-
-You can access the main website of the project at [http://consulproject.org](http://consulproject.org) where you can find documentation about the use of the platform, videos, and links to the community space.
+- Gem 'rails-timeago', '~> 2.0' ( coming soon )
+Format the date in a pretty way ( 1 days ago, 1 month ago)
+Translation ready in dozens of languages
 
 ## Configuration for development and test environments
 
-**NOTE**: For more detailed instructions check the [docs](https://docs.consulproject.org)
+**NOTE**: For more detailed instructions check the original Consul project [docs](https://docs.consulproject.org)
 
 Prerequisites: install git, Ruby 2.7.6, CMake, pkg-config, shared-mime-info, Node.js and PostgreSQL (>=9.5).
 
 ```bash
-git clone https://github.com/consul/consul.git
-cd consul
+git clone https://github.com/netoum/meetdemocracy-consul-1.5.git
+cd meetdemocracy-consul-1.5
 bundle install
 cp config/database.yml.example config/database.yml
 cp config/secrets.yml.example config/secrets.yml
@@ -58,34 +59,18 @@ Run the app locally:
 bin/rails s
 ```
 
-Run the tests with:
-
-```bash
-bin/rspec
-```
 
 You can use the default admin user from the seeds file:
 
- **user:** admin@consul.dev
- **pass:** 12345678
+ **user:** admin
+ **pass:** meetdemocracy
 
 But for some actions like voting, you will need a verified user, the seeds file also includes one:
 
- **user:** verified@consul.dev
- **pass:** 12345678
-
-## Configuration for production environments
-
-See [installer](https://github.com/consul/installer)
-
-## Current state
-
-Development started on [2015 July 15th](https://github.com/consul/consul/commit/8db36308379accd44b5de4f680a54c41a0cc6fc6). Code was deployed to production on 2015 september 7th to [decide.madrid.es](https://decide.madrid.es). Since then new features are added often. You can take a look at the current features at the [project's website](http://consulproject.org/) and future features at the [Roadmap](https://github.com/consul/consul/projects/6) and [open issues list](https://github.com/consul/consul/issues).
+ **user:** verified
+ **pass:** meetdemocracy
 
 ## License
 
 Code published under AFFERO GPL v3 (see [LICENSE-AGPLv3.txt](LICENSE-AGPLv3.txt))
 
-## Contributions
-
-See [CONTRIBUTING.md](CONTRIBUTING.md)
